@@ -1,10 +1,10 @@
-![](https://github.com/zeit/art/blob/525bd1bb39d97dd3b91c976106a6d5cc5766b678/hyper/repo-banner.png)
+![](https://assets.zeit.co/image/upload/v1537650716/repositories/hyper/hyper-repo-banner.png)
 
 [![macOS CI Status](https://circleci.com/gh/zeit/hyper.svg?style=shield)](https://circleci.com/gh/zeit/hyper)
 [![Windows CI status](https://ci.appveyor.com/api/projects/status/kqvb4oa772an58sc?svg=true)](https://ci.appveyor.com/project/zeit/hyper)
 [![Linux CI status](https://travis-ci.org/zeit/hyper.svg?branch=master)](https://travis-ci.org/zeit/hyper)
 [![Changelog #213](https://img.shields.io/badge/changelog-%23213-lightgrey.svg)](https://changelog.com/213)
-[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/hyper)
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/zeit/hyper)
 
 For more details, head to: https://hyper.is
 
@@ -12,20 +12,32 @@ For more details, head to: https://hyper.is
 
 [Download the latest release!](https://hyper.is/#installation)
 
-If you are on macOS, you can also use [Homebrew Cask](https://caskroom.github.io/) to download the app by running these commands:
+### Linux
+#### Arch and derivatives
+Hyper is available in the [AUR](https://aur.archlinux.org/packages/hyper/). Use an AUR package manager like [aurman](https://github.com/polygamma/aurman)
+
+```sh
+aurman -S hyper
+```
+
+### macOS
+
+Use [Homebrew Cask](https://brew.sh) to download the app by running these commands:
 
 ```bash
 brew update
 brew cask install hyper
 ```
 
-If you are on Windows, you can use [chocolatey](https://chocolatey.org/) to install the app by running the following command (package information can be found [here](https://chocolatey.org/packages/hyper/)):
+### Windows
+
+Use [chocolatey](https://chocolatey.org/) to install the app by running the following command (package information can be found [here](https://chocolatey.org/packages/hyper/)):
 
 ```bash
 choco install hyper
 ```
 
-**Note:** The version available on [Homebrew Cask](https://caskroom.github.io/) or [Chocolatey](https://chocolatey.org) may not be the latest. Please consider downloading it from [here](https://hyper.is/#installation) if that's the case.
+**Note:** The version available on [Homebrew Cask](https://brew.sh), [Chocolatey](https://chocolatey.org) or the [AUR](https://aur.archlinux.org) may not be the latest. Please consider downloading it from [here](https://hyper.is/#installation) if that's the case.
 
 ## Contribute
 
@@ -51,6 +63,7 @@ Regardless of the platform you are working on, you will need to have Yarn instal
 5. To run `hyper`
   * `yarn run app` from another terminal tab/window/pane
   * If you are using **Visual Studio Code**, select `Launch Hyper` in debugger configuration to launch a new Hyper instance with debugger attached.
+  * If you interrupt `yarn run dev`, you'll need to relaunch it each time you want to test something. Webpack will watch changes and will rebuild renderer code when needed (and only what have changed). You'll just have to relaunch electron by using yarn run app or VSCode launch task.
 
 To make sure that your code works in the finished application, you can generate the binaries like this:
 
@@ -78,7 +91,7 @@ If you have issues in the `codesign` step when running `yarn run dist` on macOS,
 ## Related Repositories
 
 - [Art](https://github.com/zeit/art/tree/master/hyper)
-- [Website](website/)
+- [Website](https://github.com/zeit/hyper-site)
 - [Sample Extension](https://github.com/zeit/hyperpower)
 - [Sample Theme](https://github.com/zeit/hyperyellow)
 - [Awesome Hyper](https://github.com/bnb/awesome-hyper)
